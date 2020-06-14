@@ -3,13 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Happy Birthday</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="svg-pan-zoom.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+    <!-- SVG library -->
+    <script src="js/svg-pan-zoom.min.js"></script>
+    <!-- jquery for bootstrap -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
 </head>
 <body>
-    <object id="image" type="image/svg+xml" data="img/better.svg">
-        Your browser does not support SVG
-    </object>
-    <script src="scripts.js"></script>
+<!-- SVG -->
+<object id="image" type="image/svg+xml" data="img/wordcloud.svg">
+    Your browser does not support SVG D:
+</object>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="col-12 modal-title text-center" id="exampleModalLabel">Happy Birthday Eugene!</h1>
+            </div>
+            <div class="modal-body">
+                <h5>
+                    Congratulations on becoming one year older (and one year wiser?)
+                </h5>
+                <p>
+                    I'm not much of an artist, but at least I know a bit of programming so here's a wordcloud
+                    I made from all of our messages over the past few years on Facebook and Hangouts.
+                    There's quite a lot of random stuff here, but also some good memories mixed in too. Of course,
+                    you know that I also had to include 👉👈 in here somehow.
+                </p>
+                <hr>
+                <h5>
+                    Controls
+                </h5>
+                <ul>
+                    <li>
+                        Pan - Click and drag or use WASD
+                    </li>
+                    <li>
+                        Zoom - Scroll to zoom or use the controls in the bottom left
+                    </li>
+                    <li>
+                        Reset - Press R to go back the original perspective
+                    </li>
+                    <li>
+                        Hide Controls - Press Space to hide the controls
+                    </li>
+                    <li>
+                        Show this on load - Press M to toggle whether this will show the next time the page loads
+                    </li>
+                </ul>
+                <p>P.S. I only made this so that there would be time for the image to load 😛 The controls are also a
+                    bit laggy
+                    because of the image size...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/scripts.js"></script>
+<!-- Toast -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center"
+     style="min-height: 200px;">
+    <div class="toast " data-delay="1000" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            ...
+        </div>
+    </div>
+</div>
 </body>
 </html>

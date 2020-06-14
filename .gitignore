@@ -1,5 +1,7 @@
 */
-!img/
+!img/wordcloud.svg
+!js/
+!css/
 *.txt
 *.json
 Eugene Birthday 2020.iml
